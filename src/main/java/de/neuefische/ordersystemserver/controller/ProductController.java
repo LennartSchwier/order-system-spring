@@ -35,7 +35,7 @@ public class ProductController {
         throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
     }
 
-    @PutMapping
+    @PutMapping(path = "/add")
     public Product addProduct(@RequestBody Product product) {
         return productService.addProduct(product);
     }
